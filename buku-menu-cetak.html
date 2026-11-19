@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lembar Buku Menu Fisik — Remboelan Gallery+</title>
+  <style>
+    :root {
+      --brown: #745a4b;
+      --brown-dark: #2c2018;
+      --brown-muted: #6e5a4f;
+      --green: #007A00;
+      --border: #dcd2c2;
+      --surface: rgba(252, 249, 244, 0.96);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Calibri, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: url('assets/images/bg.jpg') center/cover fixed;
+      color: var(--brown-dark);
+      min-height: 100vh;
+      padding: 32px 16px 60px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      margin-bottom: 4px;
+    }
+    p.sub {
+      font-size: 13.5px;
+      color: var(--brown-muted);
+    }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      border: 1px solid var(--brown);
+      background: transparent;
+      color: var(--brown-dark);
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .btn-primary {
+      background: var(--brown);
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 20px;
+    }
+    .target-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .target-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #eee7dc;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .target-title {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: 400;
+    }
+    .target-tag {
+      color: var(--brown-muted);
+      font-size: 12px;
+    }
+    .target-img-wrap {
+      border: 1px solid var(--brown-dark);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .target-img-wrap img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      font-size: 12.5px;
+      color: var(--brown-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+    @media print {
+      .toolbar { display: none; }
+      body { background: #fff; padding: 0; }
+      .container { border: none; }
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Lembar Buku Menu Fisik — Restoran Remboelan</h1>
+        <p class="sub">Media cetak Image Target untuk pemindaian kamera WebAR Real Food Preview</p>
+      </div>
+      <div class="toolbar">
+        <a href="index.html" class="btn">Kembali ke Website</a>
+        <button class="btn btn-primary" onclick="window.print()">Cetak Halaman (PDF)</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="target-card">
+        <div class="target-header">
+          <span class="target-title">Nasi Bakar Roa</span>
+          <span class="target-tag">Marker 01 &bull; Rp 61.000</span>
+        </div>
+        <div class="target-img-wrap">
+          <img src="assets/images/target_nasi_bakar_roa.jpg" alt="Nasi Bakar Roa" />
+        </div>
+        <div class="caption">
+          <span>Kategori: Nasi Bakar</span>
+          <span>Image Target 01</span>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div class="target-header">
+          <span class="target-title">Nasi Langgi</span>
+          <span class="target-tag">Marker 02 &bull; Rp 57.000</span>
+        </div>
+        <div class="target-img-wrap">
+          <img src="assets/images/target_nasi_langgi.jpg" alt="Nasi Langgi" />
+        </div>
+        <div class="caption">
+          <span>Kategori: Nasi Campur</span>
+          <span>Image Target 02</span>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div class="target-header">
+          <span class="target-title">Nasi Berkat</span>
+          <span class="target-tag">Marker 03 &bull; Rp 58.000</span>
+        </div>
+        <div class="target-img-wrap">
+          <img src="assets/images/target_nasi_berkat.jpg" alt="Nasi Berkat" />
+        </div>
+        <div class="caption">
+          <span>Kategori: Nasi Campur</span>
+          <span>Image Target 03</span>
+        </div>
+      </div>
+
+      <div class="target-card">
+        <div class="target-header">
+          <span class="target-title">Nasi Bakar Ayam Asap</span>
+          <span class="target-tag">Marker 04 &bull; Rp 58.000</span>
+        </div>
+        <div class="target-img-wrap">
+          <img src="assets/images/target_nasi_bakar_ayam.jpg" alt="Nasi Bakar Ayam Asap" />
+        </div>
+        <div class="caption">
+          <span>Kategori: Nasi Bakar</span>
+          <span>Image Target 04</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
